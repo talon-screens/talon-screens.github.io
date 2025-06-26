@@ -42,6 +42,14 @@ img { max-width: 100%; height: auto; }
 <script>
 /*! loadCSS polyfill */
 !function(e){"use strict";var t=function(t,n,r,o){function i(e){return l.body?e():void setTimeout(function(){i(e)})}function d(){a.addEventListener&&a.removeEventListener("load",d),a.media=r||"all"}var l=e.document,a=l.createElement("link");if(n)a.id=n;a.rel="stylesheet",a.href=t,a.media="only x",i(function(){l.head.appendChild(a)}),a.addEventListener&&a.addEventListener("load",d);var s=function(e){for(var t,n=l.querySelectorAll("link[href]"),r=0;r<n.length;r++)n[r].href===a.href&&(t=!0);t?e():setTimeout(function(){s(e)})};return a.onloadcssdefined=s,s(d),a};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
+
+document.addEventListener('DOMContentLoaded', function() {
+  const startYear = 1995;
+  var year = new Date().getFullYear();
+  var years = year - startYear;
+  var el = document.getElementById('years-experience-odometer');
+  if (el) el.setAttribute('data-count', years);
+});
 </script></head>
 
 <body class="body-dark-bg">
@@ -366,7 +374,7 @@ img { max-width: 100%; height: auto; }
                     </picture> </div>
           <div class="experience-box">
             <div class="counter-box">
-              <h2 class="count"><span class="odometer" data-count="22"></span> </h2>
+              <h2 class="count"><span class="odometer" data-count="" id="years-experience-odometer"></span></h2>
             </div>
             <div class="text-box">
               <p>YEARS <br>
