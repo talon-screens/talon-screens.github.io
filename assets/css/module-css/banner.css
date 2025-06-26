@@ -840,6 +840,12 @@
     width: auto;
 }
 
+.logo-crop {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+}
+
 .main-slider-three__content .title {
     position: relative;
     display: block;
